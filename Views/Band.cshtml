@@ -1,0 +1,33 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Band>
+@{
+    Layout = null;
+}
+
+<h3><strong>@Model.BandName</strong></h3>
+<div class="band-albums">
+    @foreach (Album album in Model.Children<Album>())
+    {
+        <h4><strong>@album.Title</strong></h4>
+        @foreach (Song song in album.Children<Song>())
+        {
+            <div class="song-info">
+                <div class="song-title">
+                    <h5><strong>@song.Title</strong></h5>
+                </div>
+                <div class="song-lyrics">
+                    <p>@song.Lyrics</p>
+                </div>
+                <div class="song-audio">
+                    <audio controls>
+                        <source src="@song.AudioRecord" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="song-logo">
+                    <img src="@Url.GetCropUrl(song.Logo,"croppedHeight125")" />
+                </div>
+            </div>
+        }
+    }
+</div>
+
