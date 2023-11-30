@@ -1,0 +1,643 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Game>
+@{
+    string rating;
+    if (Model.MiddleScore >= 7.5)
+    {
+        rating = "ratings mark-9";
+    }
+    else if (Model.MiddleScore >= 5.0)
+    {
+        rating = "ratings mark-7";
+    }
+    else
+    {
+        rating = "ratings mark-4";
+    }
+}
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="manifest" href="/manifest.json">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Persona 5 Tactica (игра 2023) — отзывы игроков, обзоры критиков, оценки, рейтинг</title>
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel='stylesheet' id='metarankings-style-css' href='https://metarankings.ru/wp-content/themes/metarankings/style.css' type='text/css' media='all' />
+    <script type='text/javascript' src='https://metarankings.ru/wp-includes/js/jquery/jquery.js'></script>
+    <script type='text/javascript' src='https://metarankings.ru/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+    <meta name="description" content="Игра Persona 5 Tactica - отзывы игроков, обзоры критиков, дата выхода, подробное описание, рейтинг, трейлер, оценки пользователей и платформы" />
+
+    <link rel="canonical" href="https://metarankings.ru/persona-5-tactica/" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="MetaRankings">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="32x32" href="/apple-touch-icon-32x32.png">
+    <link rel="apple-touch-icon" sizes="16x16" href="/apple-touch-icon-16x16.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@@MetaRankings" />
+    <meta property="og:title" content="Persona 5 Tactica — отзывы игроков, обзоры критиков, оценки, рейтинг" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://metarankings.ru/persona-5-tactica/" />
+    <meta property="og:image" content="https://metarankings.ru/images/uploads/2023/11/persona-5-tactica-cover-art.jpg" />
+    <meta property="og:site_name" content="MetaRankings" />
+    <script>window.yaContextCb = window.yaContextCb || []</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
+    <script src="https://aflt.market.yandex.ru/widget/script/api" async></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9064246890106061"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="headerer">
+        <div class="header-bottom">
+            <div class="header clear nav-menu">
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="logo">
+                    <a href="https://metarankings.ru"><span>Meta</span>Rankings</a>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li>
+                            <span onclick="jQuery( document ).ready(function($){$('.movie-drop').slideToggle('slow')});">Фильмы</span>
+                            <div class="movie-drop">
+                                <a href="https://metarankings.ru/new-movies/">Новинки</a>
+                                <a href="https://metarankings.ru/coming-soon/">Скоро</a>
+                                <a href="https://metarankings.ru/most-waiting-films/">Ожидаемые</a>
+                                <a href="https://metarankings.ru/meta/movies/">Обзоры</a>
+                                <a href="https://metarankings.ru/best-movies/">Топ фильмов</a>
+                                <a href="https://metarankings.ru/best-movies-2023/">Фильмы 2023</a>
+                                <a href="https://metarankings.ru/best-boeviki/2023/">Боевики 2023</a>
+                                <a href="https://metarankings.ru/best-horror/2023/">Ужасы 2023</a>
+                                <a href="https://metarankings.ru/best-comedy/2023/">Комедии 2023</a>
+                                <a href="https://metarankings.ru/best-thrillers/2023/">Триллеры 2023</a>
+                                <a href="https://metarankings.ru/best-fantasy/2023/">Фантастика 2023</a>
+                                <a href="https://metarankings.ru/best-fentezi/2023/">Фэнтези 2023</a>
+                                <a href="https://metarankings.ru/best-dramy/2023/">Драмы 2023</a>
+                                <a href="https://metarankings.ru/best-melodramas/2023/">Мелодрамы 2023</a>
+                                <a href="https://metarankings.ru/best-cartoons/2023/">Мультфильмы 2023</a>
+                                <a href="https://metarankings.ru/best-serials/">Сериалы</a>
+                            </div>
+                        </li>
+                        <li class="active">
+                            <span onclick="jQuery( document ).ready(function($){$('.game-drop').slideToggle('slow')});">Игры</span>
+                            <div class="game-drop">
+                                <a href="https://metarankings.ru/new-games/">Новинки</a>
+                                <a href="https://metarankings.ru/release-date/">Дата выхода</a>
+                                <a href="https://metarankings.ru/most-waiting-games/">Ожидаемые</a>
+                                <a href="https://metarankings.ru/meta/games/">Обзоры</a>
+                                <a href="https://metarankings.ru/best-games/">Топ игр</a>
+                                <a href="https://metarankings.ru/best-games-2023/">Игры 2023</a>
+                                <a href="https://metarankings.ru/best-pc-games/">ПК</a>
+                                <a href="https://metarankings.ru/best-ps4-games/">PS4</a>
+                                <a href="https://metarankings.ru/best-xboxone-games/">Xbox One</a>
+                                <a href="https://metarankings.ru/best-switch-games/">Switch</a>
+                                <a href="https://metarankings.ru/top-action-games/">Экшены</a>
+                                <a href="https://metarankings.ru/top-shooters/">Шутеры</a>
+                                <a href="https://metarankings.ru/top-horrors/">Хорроры</a>
+                                <a href="https://metarankings.ru/top-igry-priklyucheniya/">Приключения</a>
+                                <a href="https://metarankings.ru/top-rpg-games/">РПГ</a>
+                                <a href="https://metarankings.ru/best-strategii/">Стратегии</a>
+                                <a href="https://metarankings.ru/best-gonki/">Гонки</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="https://metarankings.ru/meta/collections/">Подборки</a>
+                        </li>
+                        <li>
+                            <a href="https://metarankings.ru/user-reviews/">Отзывы</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav_login">
+                    <ul>
+                        <li><a href="#" class="user-login popauthor" title="Войти на сайт"></a></li>
+                    </ul>
+                </div><div class="search_form">
+                    <form method="get" id="searchform" action="https://metarankings.ru/search/">
+                        <fieldset>
+                            <input name="text" type="search" id="search" placeholder="Название игры или фильма..." autocomplete="off" />
+                            <button type="submit"></button>
+                        </fieldset>
+                    </form>
+                    <div id="search_form-result"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+
+        <div class="game-menu">
+            <div class="platform-menu">
+                <ul>
+                    <li>
+                        <a class="bst" href="https://metarankings.ru/best-games-2023/">Лучшие игры 2023</a>
+                    </li>
+                    <li>
+                        <a class="bst" href="https://metarankings.ru/best-games-2022/">2022</a>
+                    </li>
+                    <li>
+                        <a class="mnew" href="https://metarankings.ru/new-games/">Новые игры</a>
+                    </li>
+                    <li>
+                        <a href="https://metarankings.ru/release-date/">Дата выхода игр</a>
+                    </li>
+                    <li>
+                        <a href="https://metarankings.ru/most-waiting-games/">Самые ожидаемые игры</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="container" class="clear">
+            <div class="sidebar">
+
+                <div class="widget">
+                    <div class="widget-body">
+                        <div class="graph">
+                            <h3>Рейтинг <a href="#critics">критиков</a> на основе 1 обзора</h3>
+                            <div class="graph-body"><div class="rating-graph mark-8" style="width:75%"><span class="score-graph">7.5</span></div></div>
+                            <h3>Рейтинг <a href="#users">игроков</a> на основе 4 оценок</h3>
+                            <div class="graph-body"><div class="rating-graph mark-5" style="width:50%"><span class="score-graph">5</span></div></div>
+                            <span>Метарейтинг</span> <span class="metaranking">?</span>
+                            <div class="graph-body"><div class="rating-graph mark-6" style="width:61%"><span class="score-graph">6.1</span></div></div>
+                            <div class="wait-stat">Ожидания: 2%</div>
+                            <div class="graph-body"><div class="rating-wait mark-0" style="width:2%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="content" class="lcol">
+                <div class="entry" itemscope itemtype="http://schema.org/Game">
+                    <div class="post single clear game" id="post_22941">
+                        <div class="post-meta">
+                            <h1><span itemprop="name">@Model.Title</span> (@Model.ReleaseDate.Year)</h1>
+                            <link itemprop="url" href="https://metarankings.ru/persona-5-tactica/">
+                            <meta itemprop="datePublished" content="2023-11-26">
+                        </div>
+                        <div class="post-content">
+                            <div class="thumb">
+                                <img class="post-image" src="@Model.ImageUrl" alt="Обложка игры Persona 5 Tactica" title="Игра Persona 5 Tactica" itemprop="image">
+                                <div class="watch-trailer">
+                                    <h3><span class="twatch"><span class="p-twatch">Смотреть трейлер</span></span></h3>
+                                </div>
+                            </div>
+                            <div id="ratings">
+                                <div class="@rating">
+                                    <div id="post-ratings-22941" class="post-ratings" data-nonce="39d372eb96">
+                                        <div class="rating">
+                                            <div class="score">
+                                                @Model.MiddleScore
+                                            </div>
+                                            Оценки: <span>4</span>
+                                        </div>
+                                        <div class="your-score">
+                                            <img id="rating_22941_1" class="rating-on mark-1" src="https://metarankings.ru/wp-content/plugins/wp-postratings/images/squares/rating_on.gif" alt="1" onmouseover="current_rating(22941, 1, '1');" onmouseout="ratings_off(5, 0, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer;" /><img id="rating_22941_2" class="rating-on mark-2" src="https://metarankings.ru/wp-content/plugins/wp-postratings/images/squares/rating_on.gif" alt="2" onmouseover="current_rating(22941, 2, '2');" onmouseout="ratings_off(5, 0, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer;" /><img id="rating_22941_3" class="rating-on mark-3" src="https://metarankings.ru/wp-content/plugins/wp-postratings/images/squares/rating_on.gif" alt="3" onmouseover="current_rating(22941, 3, '3');" onmouseout="ratings_off(5, 0, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer;" /><img id="rating_22941_4" class="rating-on mark-4" src="https://metarankings.ru/wp-content/plugins/wp-postratings/images/squares/rating_on.gif" alt="4" onmouseover="current_rating(22941, 4, '4');" onmouseout="ratings_off(5, 0, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer;" /><img id="rating_22941_5" class="rating-on mark-5" src="https://metarankings.ru/wp-content/plugins/wp-postratings/images/squares/rating_on.gif" alt="5" onmouseover="current_rating(22941, 5, '5');" onmouseout="ratings_off(5, 0, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer;" /><img id="rating_22941_6" class="rating-on mark-6" src="https://metarankings.ru/wp-content/plugins/wp-postratings/images/squares/rating_off.gif" alt="6" onmouseover="current_rating(22941, 6, '6');" onmouseout="ratings_off(5, 0, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer;" /><img id="rating_22941_7" class="rating-on mark-7" src="https://metarankings.ru/wp-content/plugins/wp-postratings/images/squares/rating_off.gif" alt="7" onmouseover="current_rating(22941, 7, '7');" onmouseout="ratings_off(5, 0, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer;" /><img id="rating_22941_8" class="rating-on mark-8" src="https://metarankings.ru/wp-content/plugins/wp-postratings/images/squares/rating_off.gif" alt="8" onmouseover="current_rating(22941, 8, '8');" onmouseout="ratings_off(5, 0, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer;" /><img id="rating_22941_9" class="rating-on mark-9" src="https://metarankings.ru/wp-content/plugins/wp-postratings/images/squares/rating_off.gif" alt="9" onmouseover="current_rating(22941, 9, '9');" onmouseout="ratings_off(5, 0, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer;" /><img id="rating_22941_10" class="rating-on mark-10" src="https://metarankings.ru/wp-content/plugins/wp-postratings/images/squares/rating_off.gif" alt="10" onmouseover="current_rating(22941, 10, '10');" onmouseout="ratings_off(5, 0, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer;" /> <span class="post-ratings-text" id="ratings_22941_text">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="featured-game">
+                                <p><span class="label">Разработчик:</span> <a href="/razrabotchiki/atlus/">@Model.Developer</a>, ...</p>
+                                <p><span class="label">Издатель:</span> <a href="/izdateli/sega/">@Model.Publisher</a> </p>
+                                <p>
+                                    <span class="label">Платформы:</span>
+                                    @foreach (var platofrm in Model.Platforms)
+                                    {
+                                        <a href="https://metarankings.ru/meta/games/pc/">@platofrm</a>
+                                    }
+                                </p>
+                                <p>
+                                    <span class="label">Жанр:</span> @foreach (var genre in Model.Genres)
+                                    {
+                                        <a href="https://metarankings.ru/genre/strategiya/">@genre</a>
+                                    }
+                                </p>
+                                <p><span class="label">Локализация:</span>  (<a href="https://metarankings.ru/igry-bez-russkogo-yazyka/">@Model.Localization</a>)</p>
+                                <p><span class="label">Дата выхода:</span> <span class="release-date">@Model.ReleaseDate.ToLongDateString()</span></p>
+                            </div>
+
+                            <div class="description">
+                                <h2>@Model.DescriptionTitle</h2>
+                                <div itemprop="description">
+                                    <p>@Model.DescriptionText</p>
+                                </div>
+
+                            </div>
+
+                            <div class="podborki">
+                                <p>
+                                    <a class="mark-link" href="https://metarankings.ru/best-pc-games/">Топ игр на ПК</a>
+                                    <a class="mark-link" href="https://metarankings.ru/best-strategii/">стратегии</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div id="tcontent">
+                            <div class="video-content">
+                                <div id="content-trailer">
+                                    <iframe src="https://www.youtube.com/embed/6iPrNxNdmhk" height="280" width="580" allowfullscreen="" style="border-width:0"></iframe>
+                                </div>
+                            </div>
+                            <div class="ads-horizont hor-1">
+                                <!-- Yandex.RTB R-A-201169-7 -->
+                                <div id="yandex_rtb_R-A-201169-7-1"></div>
+                                <script>
+                                    window.yaContextCb.push(() => {
+                                        Ya.Context.AdvManager.render({
+                                            renderTo: 'yandex_rtb_R-A-201169-7-1',
+                                            blockId: 'R-A-201169-7'
+                                        })
+                                    })</script>
+                            </div>
+                        </div>
+                        <div class="share">
+                            <div class="share-text">Поделитесь с друзьями в социальных сетях</div>
+                            <span class="vko" onclick="window.open('/click.php?https://vk.com/share.php?url=https://metarankings.ru/persona-5-tactica/', 'newwindow','width=200,height=150'); return false;"></span>
+                            <span class="tw" onclick="window.open('/click.php?https://twitter.com/share?url=https://metarankings.ru/persona-5-tactica/&amp;text=Persona+5+Tactica+-+отзывы,+оценки,+обзоры+и+рейтинг+-+', 'newwindow','width=500,height=300'); return false;"></span>
+                            <span class="odn" onclick="window.open('/click.php?https://connect.ok.ru/offer?url=https://metarankings.ru/persona-5-tactica/&title=Persona+5+Tactica', 'newwindow','width=550,height=350'); return false;"></span>
+                        </div>
+
+                        <div class="post-footer">
+                            <h2>Трейлер и скриншоты <span>Persona 5 Tactica</span></h2>
+                            <div class="video">
+                                <img class="img-trailer" alt="Трейлер Persona 5 Tactica" title="Трейлер Persona 5 Tactica" src="https://img.youtube.com/vi/6iPrNxNdmhk/default.jpg" width="100" height="75">
+                                <span class="play"></span>
+                            </div>
+                            <ul class="gallery">
+                                <li><img class="attachment-screenshot" src="https://metarankings.ru/images/uploads/2023/11/persona-5-tactica-cover-art-100x75.jpg" data-original="https://metarankings.ru/images/uploads/2023/11/persona-5-tactica-cover-art.jpg" alt="Скриншоты Persona 5 Tactica" title="Persona 5 Tactica" width="100" height="75"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="videoreviews" class="video-reviews">
+                        <h3>Видеообзоры</h3>
+                        <span class="countnum">0</span>
+                        <p>Видеообзоры от Youtube-блогеров. Вы можете добавить свое или найденное видео.</p>
+                        <div class="add-videos">
+                            +
+                            <div class="author-video">
+                                Добавить видео
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ads-horizont hor-1">
+                        <!-- Yandex.RTB R-A-201169-5 -->
+                        <div id="yandex_rtb_R-A-201169-5"></div>
+                        <script>
+                            window.yaContextCb.push(() => {
+                                Ya.Context.AdvManager.render({
+                                    renderTo: "yandex_rtb_R-A-201169-5",
+                                    blockId: "R-A-201169-5"
+                                })
+                            })</script>
+                    </div>
+                    <div class="reviews">
+                        <div id="reviews">
+                            <div class="critic-score mark-8" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+                                <span data-title="Общий рейтинг критиков — средний балл на основе русских и зарубежных изданий" class="tooltip" itemprop="ratingValue">
+                                    7.5
+                                </span>
+                                <meta itemprop="reviewCount" content="1">
+                                <meta itemprop="ratingCount" content="1">
+                                <meta itemprop="bestRating" content="10">
+                                <meta itemprop="worstRating" content="1">
+                            </div>
+                            <h2 id="critics">Оценки и отзывы критиков <span>Persona 5 Tactica</span></h2>
+                            <span class="countnum">1</span>
+                            <div class="reviews_list">
+                                <p>Ниже собраны оценки разных интернет-изданий с цитатами из обзоров. Мы не добавляем безоценочные рецензии, так как не умеем определять их исходя из написанного текста и не можем додумывать их за автора. Мы пытаемся составить максимально объективный рейтинг на основе реально выставленных оценок.</p>
+                                <span class="links-add">Добавить</span>
+                                <div id="review-1" class="critic-text mark-8">
+                                    <div class="review-meta">
+                                        <div class="small-score mark-8">
+                                            <span data-title="Оценка издания из 10 баллов" class="tooltip">7.5</span>
+                                        </div>
+                                        <div class="review-author"><p><a href="/critics/vk_play/"><span>VK Play</span></a> Автор отзыва: Максим Еремеев</p></div>
+                                    </div>
+                                    <p>Впечатления от P5T двойственные. С одной стороны, если вам нужна по-настоящему проработанная тактическая игра с ощутимым уровнем сложности, то тут вы, возможно, заскучаете.</p>
+                                    <a rel="nofollow" class="review-link" href="https://metarankings.ru/click/?psite=22941&site=1" target="_blank">Читать обзор полностью</a>
+                                </div>
+                                <div class="critic-text">
+                                    <div class="review-meta">
+                                        <div class="review-author"><p><span>StopGame</span> Автор отзыва: Алексей Лихачев</p></div>
+                                    </div>
+                                    <p>Ожидания от Persona 5 Tactica были не очень высокими, но плохой игра не оказалась. Здесь неплохая история, забавные диалоги и адекватная боевая система </p>
+                                    <a rel="nofollow" class="review-link" href="https://metarankings.ru/click/?psite=22941&csite=1" target="_blank">Читать обзор полностью</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-reviews comments">
+                        <div id="comments">
+                            <h2 id="users">Отзывы игроков <span>Persona 5 Tactica</span></h2>
+                            <span class="countnum">0</span>
+                            <div class="reviews-none"><p>Отзывов  от игроков пока нет. Вы можете стать первым(ой), добавив свой.  Если вы уже в нее играли, расскажите, что вы о ней думаете. Расскажите о ее сильных и слабых сторонах, о ее плюсах и минусах. Это будет полезно знать другим людям, которые хотят в нее поиграть. Перед написанием ознакомьтесь с <a rel="nofollow" href="/polzovatelskoe-soglashenie/#bans">нашими правилами</a>.</p></div>
+                        </div>
+                        <div id="respond" class="comment-respond">
+                            <h3 id="reply-title" class="comment-reply-title"><span>Добавить отзыв</span> <small><a rel="nofollow" id="cancel-comment-reply-link" href="/persona-5-tactica/#respond" style="display:none;">Отменить ответ</a></small></h3>
+                            <form action="https://metarankings.ru/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+                                <div class="commform-author"><p>Ваше имя <span>Обязательно!</span></p><div><input type="text" name="metarankings-name" id="author" tabindex="2" /></div></div>
+                                <div class="commform-textarea"><div><div class="count"><span id="count">0</span> (60 символов - минимум)</div><label for="comment">Ваш отзыв... <span>(не менее 60 символов, без мата, оскорблений, капса и без ссылок на сторонние ресурсы)</span></label><textarea name="metarankings-comm" id="comment" cols="50" rows="7" tabindex="1"></textarea></div></div>												<p class="form-submit">
+                                    <input name="submit" type="submit" id="submit" value="Отправить" />
+                                    <input type='hidden' name='comment_post_ID' value='22941' id='comment_post_ID' />
+                                    <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+                                </p>
+                            </form>
+                        </div><!-- #respond -->
+                        <script type="text/javascript">
+                            setInterval(ShowCount, 390); function ShowCount() { var Count = document.getElementById('comment').value.length; document.getElementById('count').innerHTML = Count; }
+                        </script>
+                    </div>
+                </div>
+
+                <div class="news-module">
+                    <div class="news-item">
+                        <a href="https://metarankings.ru/luchshie-igrovye-smartfony-v-2023-2024-godu/" title="Лучшие игровые смартфоны в 2023 &#8212; 2024 году"><img class="news-thumb" src="https://metarankings.ru/images/uploads/2023/01/luchshie-igrovye-smartfony-v-2023-2024-445x250.jpg" alt="Лучшие игровые смартфоны в 2023 &#8212; 2024 году"><span class="news-title">Лучшие игровые смартфоны в 2023 &#8212; 2024 году</span></a>
+                    </div>
+                    <div class="news-item">
+                        <a href="https://metarankings.ru/luchshie-igrovye-naushniki-i-garnitury-v-2022-2023-godu/" title="Лучшие игровые наушники и гарнитуры в 2022-2023 году"><img class="news-thumb" src="https://metarankings.ru/images/uploads/2022/06/luchshie-igrovye-naushniki-v-2022-2023-445x250.jpg" alt="Лучшие игровые наушники и гарнитуры в 2022-2023 году"><span class="news-title">Лучшие игровые наушники и гарнитуры в 2022-2023 году</span></a>
+                    </div>
+                </div>
+
+                <div class="list clear similar">
+                    <h2>Похожие игры</h2>
+                    <a href="https://metarankings.ru/persona-5-strikers/" title="Persona 5 Strikers">
+                        <div class="featured-image">
+                            <img class="post-image" src="https://metarankings.ru/images/uploads/2021/02/persona-5-strikers-boxart-cover-196x281.jpg" alt="Persona 5 Strikers">
+                            <div class="small-score mark-7">6.8</div>
+                            <span>Persona 5 Strikers</span>
+                        </div>
+                    </a>
+                    <a href="https://metarankings.ru/persona-5-royal/" title="Persona 5 Royal">
+                        <div class="featured-image">
+                            <img class="post-image" src="https://metarankings.ru/images/uploads/persona-5-royal-boxart-cover-188x281.jpg" alt="Persona 5 Royal">
+                            <div class="small-score mark-8">8.2</div>
+                            <span>Persona 5 Royal</span>
+                        </div>
+                    </a>
+                    <a href="https://metarankings.ru/warhammer-age-of-sigmar-realms-of-ruin/" title="Warhammer Age of Sigmar: Realms of Ruin">
+                        <div class="featured-image">
+                            <img class="post-image" src="https://metarankings.ru/images/uploads/2023/07/warhammer-age-of-sigmar-realms-of-ruin-boxart-cover-196x281.jpg" alt="Warhammer Age of Sigmar: Realms of Ruin">
+                            <div class="small-score mark-5">5.1</div>
+                            <span>Warhammer Age of Sigmar: Realms of Ruin</span>
+                        </div>
+                    </a>
+                    <a href="https://metarankings.ru/company-of-heroes-collection/" title="Company of Heroes Collection">
+                        <div class="featured-image">
+                            <img class="post-image" src="https://metarankings.ru/images/uploads/2023/10/company-of-heroes-collection-boxart-cover-196x281.jpg" alt="Company of Heroes Collection">
+                            <div class="small-score mark-6">6.4</div>
+                            <span>Company of Heroes Collection</span>
+                        </div>
+                    </a>
+                    <a href="https://metarankings.ru/total-war-pharaoh/" title="Total War: Pharaoh">
+                        <div class="featured-image">
+                            <img class="post-image" src="https://metarankings.ru/images/uploads/2023/10/total-war-pharaoh-boxart-cover-196x281.jpg" alt="Total War: Pharaoh">
+                            <div class="small-score mark-0">0</div>
+                            <span>Total War: Pharaoh</span>
+                        </div>
+                    </a>
+                    <a href="https://metarankings.ru/star-trek-infinite/" title="Star Trek: Infinite">
+                        <div class="featured-image">
+                            <img class="post-image" src="https://metarankings.ru/images/uploads/2023/10/star-trek-infiniteboxart-cover-200x281.jpg" alt="Star Trek: Infinite">
+                            <div class="small-score mark-5">5.2</div>
+                            <span>Star Trek: Infinite</span>
+                        </div>
+                    </a>
+                    <a href="https://metarankings.ru/the-lamplighters-league/" title="The Lamplighters League">
+                        <div class="featured-image">
+                            <img class="post-image" src="https://metarankings.ru/images/uploads/2023/09/the-lamplighters-league-boxart-cover-196x281.jpg" alt="The Lamplighters League">
+                            <div class="small-score mark-6">6</div>
+                            <span>The Lamplighters League</span>
+                        </div>
+                    </a>
+                    <a href="https://metarankings.ru/dune-spice-wars/" title="Dune: Spice Wars">
+                        <div class="featured-image">
+                            <img class="post-image" src="https://metarankings.ru/images/uploads/2023/09/dune-spice-wars-boxart-cover-197x281.jpg" alt="Dune: Spice Wars">
+                            <div class="small-score mark-6">6</div>
+                            <span>Dune: Spice Wars</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="sidebar rcol">
+                <div class="widget last-reviews">
+                    <div class="widget-body">
+                        <ul><li class="recent-reviews"><div class="ureview-text"><span class="small-score mark-10">10</span> <span class="title-reviews"><a href="https://metarankings.ru/film-strazhi-galaktiki-chast-3-2023/">Стражи Галактики. Часть 3</a></span> - <a rel="nofollow" title="Читать отзыв от Алекс" href="https://metarankings.ru/film-strazhi-galaktiki-chast-3-2023/comment-page-1/#comment-16860">отзыв от Алекс</a></div></li></ul>
+                        <ul><li class="recent-reviews"><div class="ureview-text"><span class="small-score mark-10">10</span> <span class="title-reviews"><a href="https://metarankings.ru/dikoe-serdce-2023/">Дикое сердце</a></span> - <a rel="nofollow" title="Читать отзыв от Рузиля" href="https://metarankings.ru/dikoe-serdce-2023/comment-page-1/#comment-16859">отзыв от Рузиля</a></div></li></ul>
+                        <ul><li class="recent-reviews"><div class="ureview-text"><span class="small-score mark-10">10</span> <span class="title-reviews"><a href="https://metarankings.ru/marvels-spider-man-2/">Marvel’s Spider-Man 2</a></span> - <a rel="nofollow" title="Читать отзыв от Миха" href="https://metarankings.ru/marvels-spider-man-2/comment-page-1/#comment-16858">отзыв от Миха</a></div></li></ul>
+                        <ul><li class="recent-reviews"><div class="ureview-text"><span class="small-score mark-7">7</span> <span class="title-reviews"><a href="https://metarankings.ru/13-prishestvij-dyavola-2023/">13 пришествий дьявола</a></span> - <a rel="nofollow" title="Читать отзыв от Валерия" href="https://metarankings.ru/13-prishestvij-dyavola-2023/comment-page-1/#comment-16857">отзыв от Валерия</a></div></li></ul>
+                        <ul><li class="recent-reviews"><div class="ureview-text"><span class="small-score mark-1">1</span> <span class="title-reviews"><a href="https://metarankings.ru/starfield/">Starfield</a></span> - <a rel="nofollow" title="Читать отзыв от Влад" href="https://metarankings.ru/starfield/comment-page-1/#comment-16856">отзыв от Влад</a></div></li></ul>
+                        <ul><li class="recent-reviews"><div class="ureview-text"><span class="small-score mark-1">1</span> <span class="title-reviews"><a href="https://metarankings.ru/60-minut/">60 минут</a></span> - <a rel="nofollow" title="Читать отзыв от Виталий." href="https://metarankings.ru/60-minut/comment-page-6/#comment-16855">отзыв от Виталий.</a></div></li></ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer">
+            <script>
+                [].forEach.call(document.querySelectorAll('img[data-src]'), function (img) {
+                    img.setAttribute('src', img.getAttribute('data-src'));
+                    img.onload = function () {
+                        img.removeAttribute('data-src');
+                    };
+                });
+            </script>
+            <script>
+                (function ($) {
+                    $(function () {
+                        $('.menu-icon').on('click', function () {
+                            $(this).closest('.header').toggleClass('menu-open');
+                        });
+                    });
+                })(jQuery);
+            </script>
+            <script>
+                jQuery('#comments').append('<div class="your-score"><p>Ваша оценка</p></div>');
+                jQuery(window).scroll(function () {
+                    if (jQuery(this).scrollTop() > 1200) {
+                        jQuery('#comments').append(jQuery('.ratings'));
+                    } else {
+                        jQuery('#ratings').append(jQuery('#comments> .ratings'));
+                    }
+                });
+            </script>
+            <script>
+                jQuery(function ($) {
+                    $(window).scroll(function () {
+                        if ($(this).scrollTop() >= 90) {
+                            $('.header-bottom').addClass('sticky');
+                        }
+                        else {
+                            $('.header-bottom').removeClass('sticky');
+                        }
+                    });
+                });
+            </script>
+            <script>
+                jQuery(document).ready(function ($) {
+                    $("#toTop").hide();
+                    $(function () {
+                        $(window).scroll(function () {
+                            if ($(this).scrollTop() > 300) {
+                                $('#toTop').fadeIn();
+                            } else {
+                                $('#toTop').fadeOut();
+                            }
+                        });
+                        $('#toTop').click(function () {
+                            $('body,html').animate({
+                                scrollTop: 0
+                            }, 800);
+                            return false;
+                        });
+                    });
+                });
+            </script>
+            <script type="text/javascript">
+                var isProcessing = false;
+                function alter_ul_post_values(obj, post_id, ul_type) {
+
+                    if (isProcessing)
+                        return;
+                    isProcessing = true;
+
+                    jQuery(obj).find("span").html("..");
+                    jQuery.ajax({
+                        type: "POST",
+                        url: "https://metarankings.ru/wp-content/plugins/like-dislike/ajax_counter.php",
+                        data: "post_id=" + post_id + "&up_type=" + ul_type,
+                        success: function (msg) {
+                            jQuery(obj).find("span").html(msg);
+                            isProcessing = false;
+                        }
+                    });
+                }
+            </script>
+            <script type='text/javascript'>
+                /* <![CDATA[ */
+                var ratingsL10n = { "plugin_url": "https:\/\/metarankings.ru\/wp-content\/plugins\/wp-postratings", "ajax_url": "https:\/\/metarankings.ru\/wp-admin\/admin-ajax.php", "text_wait": "Please rate only 1 post at a time.", "image": "squares", "image_ext": "gif", "max": "10", "show_loading": "0", "show_fading": "1", "custom": "0" };
+                var ratings_mouseover_image = new Image(); ratings_mouseover_image.src = ratingsL10n.plugin_url + "/images/" + ratingsL10n.image + "/rating_over." + ratingsL10n.image_ext;;
+                /* ]]> */
+            </script>
+            <script type='text/javascript' src='https://metarankings.ru/wp-content/plugins/wp-postratings/postratings-js.js'></script>
+            <script type='text/javascript' src='https://metarankings.ru/wp-content/themes/metarankings/js/jquery.cycle.all.min.js'></script>
+            <script type='text/javascript' src='https://metarankings.ru/wp-content/themes/metarankings/js/script.js'></script>
+            <script type='text/javascript' src='https://metarankings.ru/wp-content/themes/metarankings/js/comments.js'></script>
+            <!-- Yandex.RTB R-A-201169-20 -->
+            <script>
+                window.yaContextCb.push(() => {
+                    Ya.Context.AdvManager.render({
+                        type: 'topAd',
+                        blockId: 'R-A-201169-20'
+                    })
+                })</script>
+
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63304078-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+
+                gtag('config', 'UA-63304078-1');
+            </script>
+
+            <script src="https://metarankings.ru/user-ip.php"></script>
+            <script type="text/javascript">
+                (function (m, e, t, r, i, k, a) {
+                    m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+                    m[i].l = 1 * new Date();
+                    for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+                    k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+                })
+                    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+                ym(57119962, "init", {
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true,
+                    params: { 'ip': userip }
+                });
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/57119962" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- Rating Mail.ru counter -->
+            <script type="text/javascript">
+                var _tmr = window._tmr || (window._tmr = []);
+                _tmr.push({ id: "2595025", type: "pageView", start: (new Date()).getTime() });
+                (function (d, w, id) {
+                    if (d.getElementById(id)) return;
+                    var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+                    ts.src = "https://top-fwz1.mail.ru/js/code.js";
+                    var f = function () { var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s); };
+                    if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+                })(document, window, "topmailru-code");
+            </script><noscript>
+                <div>
+                    <img src="https://top-fwz1.mail.ru/counter?id=2595025;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+                </div>
+            </noscript>
+            <!-- //Rating Mail.ru counter -->
+            <div class="copyright">
+                &copy; 2014 - 2023 <span data-title="MetaRankings" class="tooltip">MetaRankings</span>
+                <a rel="nofollow" href="/about/" data-title="О сайте" class="tooltip">О нас</a>
+                <a rel="nofollow" href="/contact/" data-title="Форма обратной связи" class="tooltip">Связь</a>
+                <a rel="nofollow" href="/polzovatelskoe-soglashenie/" data-title="Пользовательское соглашение" class="tooltip">Пользовательское соглашение</a>
+                <a rel="nofollow" href="/politika-konfidencialnosti/" data-title="Политика конфиденциальности" class="tooltip">Конфиденциальность</a>
+            </div>
+            <div class="credits">
+                <span class="pegi"><span data-title="Сайт может содержать контент не предназначенный лицам до 18 лет" class="tooltip">18+</span></span>
+                <a rel="nofollow" href="/click.php?https://vk.com/metarankings_ru" target="_blank"><span class="vko"></span></a>
+                <a rel="nofollow" href="/click.php?https://twitter.com/metarankings" target="_blank"><span class="tw"></span></a>
+                <!--LiveInternet counter--><script>
+                                                                                                                                                                                                                                                                                          <!--
+                                               document.write("<img src='https://counter.yadro.ru/hit?t44.6;r" +
+                                                   escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+                                                       ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+                                                           screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+                                                   ";" + Math.random() +
+                                                   "' alt='' title='LiveInternet' " +
+                                                   "border='0' width='31' height='31'>")
+                                               //--></script><!--/LiveInternet-->
+            </div>
+        </div>
+    </div>
+    <div class="wbody" onclick="show('none')"></div>
+    <div class="window">
+    </div>
+    <div class="popup_block">
+        <form action="https://metarankings.ru/login.php?redirect_to=https%3A%2F%2Fmetarankings.ru%2Fpersona-5-tactica%2F" id="loginForm" method="post">
+            <div class="field">
+                <label>Имя пользователя</label>
+                <div class="input">
+                    <input type="text" name="log" value="" id="login" />
+                </div>
+            </div>
+            <div class="field">
+                <a rel="nofollow" href="https://metarankings.ru/login.php?action=lostpassword" id="forgot">Забыли?</a>
+                <label>Пароль</label>
+                <div class="input">
+                    <input type="password" name="pwd" value="" id="pass" />
+                </div>
+            </div>
+            <div class="submit">
+                <button name="submit" type="submit">Войти</button>
+                <div class="registr"><a rel="nofollow" href="https://metarankings.ru/login.php?action=register">Регистрация</a></div>
+            </div>
+        </form>
+    </div>
+    <div class="window-image">
+        <div class="modal-image-wrap">
+            <div class="modal-image">
+                <div class="modal-left"></div>
+                <div class="modal-right"></div>
+            </div>
+            <img src="" alt="">
+        </div>
+    </div>
+    <div id="toTop" class="toTop">↑</div>
+</body>
+</html>
